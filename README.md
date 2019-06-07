@@ -16,5 +16,5 @@ jupyter-book build <book-title>
 5. View a local version of the book using a Jekyll server inside a Docker container
 ```bash
 docker pull emdupre/jupyter-book
-docker run docker run --rm --security-opt label:disable -v /home/richard/git/<repo>/<book-title>:/srv/jekyll -p 4000:4000 -it -u 1000:1000 emdupre/jupyter-book bundle exec jekyll serve --host 0.0.0.0
+docker run docker run --rm --security-opt label:disable -v <path-to-book-folder-inside-repo>:/srv/jekyll -p 4000:4000 -it -u 1000:1000 emdupre/jupyter-book bundle exec jekyll serve --host 0.0.0.0
 ``` 
